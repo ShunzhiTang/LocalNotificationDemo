@@ -14,6 +14,37 @@
 
 @implementation ViewController
 
+#pragma mark: 本地推送的属性分析
+/*
+ // 触发时间
+ @property(nullable, nonatomic,copy) NSDate *fireDate;
+ @property(nullable, nonatomic,copy) NSTimeZone *timeZone; //时区
+ 
+ @property(nonatomic) NSCalendarUnit repeatInterval;      // 0 means don't repeat //重复间隔
+ @property(nullable, nonatomic,copy) NSCalendar *repeatCalendar;//重复间隔
+ 
+ // location-based scheduling
+ @property(nullable, nonatomic,copy) CLRegion *region NS_AVAILABLE_IOS(8_0); //区域
+ @property(nonatomic,assign) BOOL regionTriggersOnce NS_AVAILABLE_IOS(8_0); 区域触发一次
+ 
+ // alerts
+ @property(nullable, nonatomic,copy) NSString *alertBody; 提示主题
+ @property(nonatomic) BOOL hasAction;                // defaults to YES. pass NO to hide launching button/slider 滑动
+ @property(nullable, nonatomic,copy) NSString *alertAction;滑动解锁的按钮的提示
+ 
+ @property(nullable, nonatomic,copy) NSString *alertLaunchImage; 通知启动图片
+ @property(nullable, nonatomic,copy) NSString *alertTitle NS_AVAILABLE_IOS(8_2);  提示标题
+ 
+ // sound
+ @property(nullable, nonatomic,copy) NSString *soundName;     UILocalNotificationDefaultSoundName
+ // badge
+ @property(nonatomic) NSInteger applicationIconBadgeNumber; 图标文字
+ 
+ // user info
+ @property(nullable, nonatomic,copy) NSDictionary *userInfo; 携带参数
+ @property (nullable, nonatomic, copy) NSString *category NS_AVAILABLE_IOS(8_0); nil
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
