@@ -13,6 +13,8 @@
 		24860B0A1BEFED0E0073C34C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24860B081BEFED0E0073C34C /* Main.storyboard */; };
 		24860B0C1BEFED0E0073C34C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24860B0B1BEFED0E0073C34C /* Assets.xcassets */; };
 		24860B0F1BEFED0E0073C34C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24860B0D1BEFED0E0073C34C /* LaunchScreen.storyboard */; };
+		24860B171BF04C2B0073C34C /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24860B161BF04C2B0073C34C /* Chat.storyboard */; settings = {ASSET_TAGS = (); }; };
+		24860B1A1BF04C3D0073C34C /* TSZChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24860B191BF04C3D0073C34C /* TSZChatViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		24860B0B1BEFED0E0073C34C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24860B0E1BEFED0E0073C34C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24860B101BEFED0E0073C34C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24860B161BF04C2B0073C34C /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		24860B181BF04C3D0073C34C /* TSZChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZChatViewController.h; sourceTree = "<group>"; };
+		24860B191BF04C3D0073C34C /* TSZChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZChatViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,9 @@
 				24860B031BEFED0E0073C34C /* AppDelegate.m */,
 				24860B051BEFED0E0073C34C /* ViewController.h */,
 				24860B061BEFED0E0073C34C /* ViewController.m */,
+				24860B181BF04C3D0073C34C /* TSZChatViewController.h */,
+				24860B191BF04C3D0073C34C /* TSZChatViewController.m */,
+				24860B161BF04C2B0073C34C /* Chat.storyboard */,
 				24860B081BEFED0E0073C34C /* Main.storyboard */,
 				24860B0B1BEFED0E0073C34C /* Assets.xcassets */,
 				24860B0D1BEFED0E0073C34C /* LaunchScreen.storyboard */,
@@ -138,6 +146,7 @@
 			files = (
 				24860B0F1BEFED0E0073C34C /* LaunchScreen.storyboard in Resources */,
 				24860B0C1BEFED0E0073C34C /* Assets.xcassets in Resources */,
+				24860B171BF04C2B0073C34C /* Chat.storyboard in Resources */,
 				24860B0A1BEFED0E0073C34C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +160,7 @@
 			files = (
 				24860B071BEFED0E0073C34C /* ViewController.m in Sources */,
 				24860B041BEFED0E0073C34C /* AppDelegate.m in Sources */,
+				24860B1A1BF04C3D0073C34C /* TSZChatViewController.m in Sources */,
 				24860B011BEFED0E0073C34C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +310,7 @@
 				24860B151BEFED0E0073C34C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -76,7 +76,7 @@
     
     //设置属性
     
-    local.alertBody = @"女神：在吗？";
+    local.alertBody = @"美女：在吗？";
     
     //
     local.fireDate = [NSDate dateWithTimeIntervalSinceNow:5];
@@ -88,8 +88,13 @@
     // 滑动解锁的文字
     local.alertAction = @"约";
     
+    local.hasAction = YES;
     
     local.alertTitle = @"通知";
+    local.alertLaunchImage = @"image";
+    
+    //重复间隔
+    local.repeatInterval =  NSCalendarUnitSecond;
     
     //显示消息数
     local.applicationIconBadgeNumber = 10;
@@ -107,11 +112,12 @@
     //取消所有 的本地通知
     //[[UIApplication sharedApplication]cancelAllLocalNotifications];
     
-    NSDictionary *dict = @{@"name info":@"zhangsa"};
+//    NSDictionary *dict = @{@"name info":@"zhangsa"};
     
-    NSLog(@"%@  , %@  ,%@",local.userInfo[@"name"] , local.userInfo[@"time"] ,local.userInfo[@"content"]);
+
     
     
 }
+
 
 @end

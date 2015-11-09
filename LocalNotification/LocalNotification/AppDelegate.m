@@ -8,15 +8,76 @@
 
 #import "AppDelegate.h"
 
+#import "TSZChatViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
+// 接收到通知调用
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+    //1、接收到通知就应该跳转到对应的界面做事情
+    
+    //聊天的内容 : 接收到通知之后会跳转到对应的界面做事情
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 500, 100, 30)];
+    label.numberOfLines = 0;
+    label.backgroundColor = [UIColor redColor];
+    label.text = [NSString stringWithFormat:@"%@",notification.userInfo[@"content"]];
+    
+//    [self.window.rootViewController.view addSubview:label];
+    
+    
+    //添加控制器
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+    
+    TSZChatViewController *vc = sb.instantiateInitialViewController;
+    
+    [vc.view addSubview:label];
+    self.window.rootViewController = vc;
+    
+    //更新显示的消息的条数
+    [UIApplication sharedApplication].applicationIconBadgeNumber = notification.applicationIconBadgeNumber - 1;
+
+    NSLog(@"%@  , %@  ,%@",notification.userInfo[@"name"] , notification.userInfo[@"time"] ,notification.userInfo[@"content"]);
+    
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    NSLog(@"-------%@" ,launchOptions [UIApplicationLaunchOptionsLocalNotificationKey] );
+    //1、接收通知启动
+    if (launchOptions [UIApplicationLaunchOptionsLocalNotificationKey]) {
+        //1、接收到通知就应该跳转到对应的界面做事情
+        
+        //聊天的内容 : 接收到通知之后会跳转到对应的界面做事情
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 500, 100, 30)];
+        label.numberOfLines = 0;
+        label.backgroundColor = [UIColor redColor];
+        label.text = [NSString stringWithFormat:@"%@" , launchOptions [UIApplicationLaunchOptionsLocationKey]];
+        
+        //    [self.window.rootViewController.view addSubview:label];
+        
+        
+        //添加控制器
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+        
+        TSZChatViewController *vc = sb.instantiateInitialViewController;
+        
+        [vc.view addSubview:label];
+        self.window.rootViewController = vc;
+        
+        //更新显示的消息的条数
+        
+        UILocalNotification *local  = launchOptions [UIApplicationLaunchOptionsLocationKey];
+        
+        [UIApplication sharedApplication].applicationIconBadgeNumber = local.applicationIconBadgeNumber - 1;
+    }else{
+        NSLog(@"hhaha");
+    }
+    
     return YES;
 }
 
